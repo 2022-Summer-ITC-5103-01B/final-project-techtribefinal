@@ -47,39 +47,65 @@ let cartList = [
         price : 11.50,
         id : "hp",
         quantity : 2,
-        sub : 11.50,
+        sub : 23,
     }
 ];
 
 // All code which should run when DOM content is loaded
 document.addEventListener("DOMContentLoaded", (event) => {
+    // Header about and doctors dropdown click event handlers
     qs('#aboutNav').addEventListener('click',()=>{
-        // console.log('Clicked');
-        // console.log(qs('#aboutNav .dropdown-content').style.display);
         if(qs('#aboutNav .dropdown-content').style.display == ''){
-            // console.log('If ran');
             qs('#doctorsNav .dropdown-content').removeAttribute('style');
             qs('#aboutNav .dropdown-content').style.display = 'block';
         }
         else{
-            // console.log("else ran");
             qs('#aboutNav .dropdown-content').removeAttribute('style');
         }
     })
     qs('#doctorsNav').addEventListener('click',()=>{
-        // console.log('Clicked');
-        // console.log(qs('#aboutNav .dropdown-content').style.display);
         if(qs('#doctorsNav .dropdown-content').style.display == ''){
-            // console.log('If ran');
             qs('#aboutNav .dropdown-content').removeAttribute('style');
             qs('#doctorsNav .dropdown-content').style.display = 'block';
         }
         else{
-            // console.log("else ran");
             qs('#doctorsNav .dropdown-content').removeAttribute('style');
         }
     })
+    // Header event handlers end
 
+    displayCartElements();
+
+
+    // // Update Button
+    // qs('#cartTotal > button:first-child').addEventListener('click',()=>{
+    //     console.log('Click');
+    //     for(cartItem of cartList){
+    //         cartItem.quantity = qs(`#${cartItem.id}`).value;
+    //         cartItem.sub = cartItem.quantity * cartItem.price;
+    //         qs(`span.${cartItem.id}`).innerHTML = '$' + cartItem.sub;
+    //     }
+    //     calculateTotal();
+    // })
+    // Removed the 'Update Cart' button
+});
+
+// Calculates the total and updates Cart Totals at the bottom
+let calculateTotal = () => {
+    let subtotal = 0;
+    for (cartItem of cartList){
+        subtotal += cartItem.sub;
+    }
+    qs('#subtotal + span').innerHTML = roundToTwoDigits( subtotal );
+
+    let tax = subtotal * 0.13;
+    qs('#tax + span').innerHTML = roundToTwoDigits( tax );
+
+    let total = subtotal + tax;
+    qs('#total + span').innerHTML = roundToTwoDigits( total );
+}
+
+let displayCartElements = () => {
     let display = `
     <div id="gridContainer">
 
@@ -94,7 +120,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     for(let cartItem of cartList){
         display += `
-        <a href="#"> <i class="bi bi-x"></i> </a>
+        <a href="#" id="${cartItem.id}cross"> <i class="bi bi-x"></i> </a>
         <img src=${cartItem.src} alt=${cartItem.alt}>
         <span>${cartItem.name}</span>
         <span>$${cartItem.price}</span>
@@ -108,46 +134,43 @@ document.addEventListener("DOMContentLoaded", (event) => {
     
     display += '</div>';
     qs('#dynamicCart').innerHTML = display;
-    // console.log(qs('#dynamicCart'));
 
     calculateTotal();
 
-    // Add button
-    for( cartItem of cartList){
-        qs(`#${cartItem.id}plus`).addEventListener('click',()=>{
-            
-            console.log(qs(`#${cartItem.id}`).id);
-            // console.log('ho')
+    // Adding event handlers to all the buttons
+    for( let i in cartList){
+        // Cross button
+        qs(`#${cartList[i].id}cross`).addEventListener('click',event=>{
+            event.preventDefault();
+            cartList = cartList.filter( (element, index) => index != i );
+
+            displayCartElements();
+            // To display elements again and add event handlers again
         });
 
+        // Add button
+        qs(`#${cartList[i].id}plus`).addEventListener('click',()=>{
+            cartList[i].quantity++;
+            qs(`input#${cartList[i].id}`).value = cartList[i].quantity;
+
+            cartList[i].sub = roundToTwoDigits( cartList[i].quantity * cartList[i].price );
+            qs(`span.${cartList[i].id}`).innerHTML = '$' + cartList[i].sub;
+
+            calculateTotal();
+        });
+
+        // Subtract button
+        qs(`#${cartList[i].id}minus`).addEventListener('click',()=>{
+            cartList[i].quantity--;
+            qs(`input#${cartList[i].id}`).value = roundToTwoDigits( cartList[i].quantity );
+
+            cartList[i].sub = roundToTwoDigits( cartList[i].quantity * cartList[i].price );
+            qs(`span.${cartList[i].id}`).innerHTML = '$' + cartList[i].sub;
+
+            calculateTotal();
+        });
     }
-});
 
-let calculateTotal = () => {
-    let subtotal = 0;
-    for (cartItem of cartList){
-        subtotal += cartItem.sub;
-    }
-    qs('#subtotal + span').innerHTML = Math.round(subtotal*100)/100;
-
-    let tax = subtotal * 0.13;
-    qs('#tax + span').innerHTML = Math.round(tax*100)/100;
-
-    let total = subtotal + tax;
-    qs('#total + span').innerHTML = Math.round(total*100)/100;
 }
 
-// Update Button
-qs('#cartTotal > button:first-child').addEventListener('click',()=>{
-    console.log('Click');
-    for(cartItem of cartList){
-        cartItem.quantity = qs(`#${cartItem.id}`).value;
-        cartItem.sub = cartItem.quantity * cartItem.price;
-        qs(`span.${cartItem.id}`).innerHTML = cartItem.sub;
-    }
-    calculateTotal();
-})
-
-// Cancel button
-
-
+let roundToTwoDigits = value => Math.round( value * 100 ) / 100;

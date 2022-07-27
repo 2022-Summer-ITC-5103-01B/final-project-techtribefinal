@@ -157,11 +157,12 @@ h1{
     padding: 0.5em 1.5em;
     /* background-color: aliceblue; */
 }
-#cartTotal > button:first-child{
+/* #cartTotal > button:first-child{
     float:right;
     margin-right: 15em;
     margin-bottom: 50px;    
-}
+} */
+/* Used for the update cart button */
 #subtotal, #tax, #total{
     display: inline-block;
     tab-size:10;
@@ -178,9 +179,9 @@ h1{
     #cartTotal{
         margin: 40px 0 0 30px;
     }
-    #cartTotal > button:first-child{
+    /* #cartTotal > button:first-child{
         margin-right: 3em;
-    }
+    } */
 }
 
 /* Grid for mobile */
@@ -218,9 +219,9 @@ h1{
     #cartTotal > button{
         padding: 5px;
     }
-    #cartTotal > button:first-child{
+    /* #cartTotal > button:first-child{
         margin-right: 1em;
-    }
+    } */
     
 
 }   
