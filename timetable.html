@@ -69,134 +69,20 @@
 
             <label for="deptSelect">Select Department:</label>
             <select id="deptSelect" name="deptSelect">
-                <option value="ad">All Departments</option>
-                <option value="ph">Primary Health Care</option>     
-                <option value="gc">Gynecological Clinic</option>
-                <option value="nc">Neurology Clinic</option>
-                <option value="os">Outpatient Surgery</option>
-                <option value="pc">Pediatric Clinic</option>
-                <option value="lc">Laryngological Clinic</option>
-                <option value="cc">Cardiology Clinic</option>
-                <option value="dc">Dental Clinic</option>
+                <option value="All Departments">All Departments</option>
+                <option value="Primary Health Care">Primary Health Care</option>     
+                <option value="Gynecological Clinic">Gynecological Clinic</option>
+                <option value="Neurology Clinic">Neurology Clinic</option>
+                <option value="Outpatient Surgery">Outpatient Surgery</option>
+                <option value="Pediatric Clinic">Pediatric Clinic</option>
+                <option value="Laryngological Clinic">Laryngological Clinic</option>
+                <option value="Cardiology Clinic">Cardiology Clinic</option>
+                <option value="Dental Clinic">Dental Clinic</option>
             </select>
 
-            <figure>
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th id="mon" scope="col">Monday</th>    
-                            <th id="tue" scope="col">Tuesday</th>
-                            <th id="wed" scope="col">Wednesday</th>
-                            <th id="thu" scope="col">Thursday</th>
-                            <th id="fri" scope="col">Friday</th>
-                            <th id="sat" scope="col">Saturday</th>
-                            <th id="sun" scope="col">Sunday</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="9" scope="row">09:00 - 10:00</td>
-                            <td headers="mon 9">Primary Health Care </td>
-                            <td headers="tue 9">Gynecological Clinic</td>
-                            <td headers="9 wed">Neurology Clinic</td>
-                            <td headers="9 thu"> </td>
-                            <td headers="9 fri">Primary Health Care </td>
-                            <td headers="9 sat">Outpatient Surgery </td>
-                            <td headers="9 sun">Pediatric Clinic </td>
-                        </tr>
-                        <tr>
-                            <td id="10" scope="row">10:00 - 11:00</td>
-                            <td headers="mon 10">Pediatric Clinic </td>
-                            <td headers="10 tue"></td>
-                            <td headers="10 wed">Laryngological Clinic</td>
-                            <td headers="10 thu">Pediatric Clinic </td>
-                            <td headers="10 fri"> </td>
-                            <td headers="10 sat">Cardiology clinic </td>
-                            <td headers="10 sun">Primary Health Care </td>
-                        </tr>
-                        <tr>
-                            <td id="15" scope="row">15:00 - 16:00</td>
-                            <td headers="mon 15"> </td>
-                            <td headers="15 tue">Dental Clinic </td>
-                            <td headers="15 wed">Primary Health Care</td>
-                            <td headers="15 thu"> </td>
-                            <td headers="15 fri">Cardiology clinic </td>
-                            <td headers="15 sat"> </td>
-                            <td headers="15 sun">Laryngological Clinic </td>
-                        </tr>
-                        <tr>
-                            <td id="18" scope="row">18:00 - 19:00</td>
-                            <td headers="mon 18">Gynecological Clinic </td>
-                            <td headers="18 tue"> </td>
-                            <td headers="18 wed">Outpatient Surgery </td>
-                            <td headers="18 thu">Dental Clinic </td>
-                            <td headers="18 fri">Primary Health Care </td>
-                            <td headers="18 sat">Neurology Clinic </td>
-                            <td headers="18 sun"> </td>
-                        </tr>
-                    </tbody>
-                    
-                </table>
-            </figure>
+            <figure id="insertTimeTable"></figure>
 
-            <ul id="timeTableMT">
-                <li>
-                    <h6>Monday</h6>
-                    <ul>
-                        <li> <span>Primary Health Care</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Pediatric Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
-                        <li> <span>Gynecological Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
-                    </ul>
-                </li>
-                <li>
-                    <h6>Tuesday</h6>
-                    <ul>
-                        <li> <span>Gynecological Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Primary Health Care</span> <span>10:00 - 11:00</span> </li> <hr>
-                        <li> <span>Outpatient Surgery</span> <span>18:00 - 19:00</span> </li> <hr>
-                    </ul>
-                </li>
-                <li>
-                    <h6>Wednesday</h6>
-                    <ul>
-                        <li> <span>Neurology Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Larynogological Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
-                        <li> <span>Dental Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
-                    </ul>
-                </li>
-                <li>
-                    <h6>Thursday</h6>
-                    <ul>
-                        <li> <span>Pediatric Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Cardiology Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
-                    </ul>
-                </li>
-                <li>
-                    <h6>Friday</h6>
-                    <ul>
-                        <li> <span>Primary Health Care</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Dental Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
-                        <li> <span>Primary Health Care</span> <span>18:00 - 19:00</span> </li> <hr>
-                    </ul>
-                </li>
-                <li>
-                    <h6>Saturday</h6>
-                    <ul>
-                        <li> <span>Outpatient Surgery</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Cardiology Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
-                        <li> <span>Neurology Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
-                    </ul>
-                </li>
-                <li>
-                    <h6>Sunday</h6>
-                    <ul>
-                        <li> <span>Pediatric Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
-                        <li> <span>Primary Health Care</span> <span>10:00 - 11:00</span> </li> <hr>
-                        <li> <span>Laryngological Clinic</span> <span>15:00 - 16:00</span> </li> <hr>
-                    </ul>
-                </li>
-            </ul>
+            <div id="timeTableMT"></div>
             
         </div>
 
