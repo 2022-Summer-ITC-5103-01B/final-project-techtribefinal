@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Time Table</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Styles/timetable.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./Home.html"
+          ><img src="./Image/logo.png" alt="Logo of alternative medicines"
+        /></a>
+        <buttton class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </buttton>
+
+        <ul id="mainNavigation">
+          <li><a href="./Home.html">Home</a></li>
+          <li id="aboutNav">
+            <div class="dropdown">
+              About
+              <ul class="dropdown-content">
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./info_page.html">Info</a></li>
+                <li><a href="./process.html">Process</a></li>
+              </ul>
+            </div>
+          </li>
+          <li id="doctorsNav">
+            <div class="dropdown">
+              Doctors
+              <ul class="dropdown-content">
+                <li><a href="./doctors.html">About Doctors</a></li>
+                <li><a href="./Appointment.html">Appointment</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="./medicines.html">Medicines</a></li>
+          <li><a href="./purchase.html">Shop</a></li>
+          <li>
+            <a href="./about.html"><i class="bi bi-cart2"></i></a>
+          </li>
+          <li>
+            <a href="./login.html"><i class="bi bi-person-circle"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+        <h1>Timetable</h1>
+
+        <div id="container">
+                
+            <h2>Doctor's Timetable</h2>
+            <p>You can search for our world class doctors' work time and schedule your visits to our clinic accordingly. <br/>
+            Please select the Department that you would like to visit from this list or locate them from the table given below: </p>
+
+            <label for="deptSelect">Select Department:</label>
+            <select id="deptSelect" name="deptSelect">
+                <option value="ad">All Departments</option>
+                <option value="ph">Primary Health Care</option>     
+                <option value="gc">Gynecological Clinic</option>
+                <option value="nc">Neurology Clinic</option>
+                <option value="os">Outpatient Surgery</option>
+                <option value="pc">Pediatric Clinic</option>
+                <option value="lc">Laryngological Clinic</option>
+                <option value="cc">Cardiology Clinic</option>
+                <option value="dc">Dental Clinic</option>
+            </select>
+
+            <figure>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th id="mon" scope="col">Monday</th>    
+                            <th id="tue" scope="col">Tuesday</th>
+                            <th id="wed" scope="col">Wednesday</th>
+                            <th id="thu" scope="col">Thursday</th>
+                            <th id="fri" scope="col">Friday</th>
+                            <th id="sat" scope="col">Saturday</th>
+                            <th id="sun" scope="col">Sunday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="9" scope="row">09:00 - 10:00</td>
+                            <td headers="mon 9">Primary Health Care </td>
+                            <td headers="tue 9">Gynecological Clinic</td>
+                            <td headers="9 wed">Neurology Clinic</td>
+                            <td headers="9 thu"> </td>
+                            <td headers="9 fri">Primary Health Care </td>
+                            <td headers="9 sat">Outpatient Surgery </td>
+                            <td headers="9 sun">Pediatric Clinic </td>
+                        </tr>
+                        <tr>
+                            <td id="10" scope="row">10:00 - 11:00</td>
+                            <td headers="mon 10">Pediatric Clinic </td>
+                            <td headers="10 tue"></td>
+                            <td headers="10 wed">Laryngological Clinic</td>
+                            <td headers="10 thu">Pediatric Clinic </td>
+                            <td headers="10 fri"> </td>
+                            <td headers="10 sat">Cardiology clinic </td>
+                            <td headers="10 sun">Primary Health Care </td>
+                        </tr>
+                        <tr>
+                            <td id="15" scope="row">15:00 - 16:00</td>
+                            <td headers="mon 15"> </td>
+                            <td headers="15 tue">Dental Clinic </td>
+                            <td headers="15 wed">Primary Health Care</td>
+                            <td headers="15 thu"> </td>
+                            <td headers="15 fri">Cardiology clinic </td>
+                            <td headers="15 sat"> </td>
+                            <td headers="15 sun">Laryngological Clinic </td>
+                        </tr>
+                        <tr>
+                            <td id="18" scope="row">18:00 - 19:00</td>
+                            <td headers="mon 18">Gynecological Clinic </td>
+                            <td headers="18 tue"> </td>
+                            <td headers="18 wed">Outpatient Surgery </td>
+                            <td headers="18 thu">Dental Clinic </td>
+                            <td headers="18 fri">Primary Health Care </td>
+                            <td headers="18 sat">Neurology Clinic </td>
+                            <td headers="18 sun"> </td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </figure>
+
+            <ul id="timeTableMT">
+                <li>
+                    <h6>Monday</h6>
+                    <ul>
+                        <li> <span>Primary Health Care</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Pediatric Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
+                        <li> <span>Gynecological Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Tuesday</h6>
+                    <ul>
+                        <li> <span>Gynecological Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Primary Health Care</span> <span>10:00 - 11:00</span> </li> <hr>
+                        <li> <span>Outpatient Surgery</span> <span>18:00 - 19:00</span> </li> <hr>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Wednesday</h6>
+                    <ul>
+                        <li> <span>Neurology Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Larynogological Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
+                        <li> <span>Dental Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Thursday</h6>
+                    <ul>
+                        <li> <span>Pediatric Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Cardiology Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Friday</h6>
+                    <ul>
+                        <li> <span>Primary Health Care</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Dental Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
+                        <li> <span>Primary Health Care</span> <span>18:00 - 19:00</span> </li> <hr>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Saturday</h6>
+                    <ul>
+                        <li> <span>Outpatient Surgery</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Cardiology Clinic</span> <span>10:00 - 11:00</span> </li> <hr>
+                        <li> <span>Neurology Clinic</span> <span>18:00 - 19:00</span> </li> <hr>
+                    </ul>
+                </li>
+                <li>
+                    <h6>Sunday</h6>
+                    <ul>
+                        <li> <span>Pediatric Clinic</span> <span>09:00 - 10:00</span> </li> <hr>
+                        <li> <span>Primary Health Care</span> <span>10:00 - 11:00</span> </li> <hr>
+                        <li> <span>Laryngological Clinic</span> <span>15:00 - 16:00</span> </li> <hr>
+                    </ul>
+                </li>
+            </ul>
+            
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="row primary">
+        <div class="column about">
+            <h3>Alternative Medicines</h3>
+
+            <p>
+            It is the time to replace your allopathic medicines with alternative
+            medicines which do not harm your body. Contact us or come pay us a
+            visit to know more.
+            </p>
+            <br />
+            <div class="aicon">
+            <i class="bi bi-geo-alt-fill"></i> XYZ street, 10000 Toronto,
+            Canada<br />
+            <i class="bi bi-telephone-fill"></i> (+123)4567891011<br />
+            <i class="bi bi-envelope"></i> abc@alternativemedicines.me <br />
+            </div>
+
+            <div class="social">
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i> <br /></a>
+            </div>
+        </div>
+
+        <div class="column links">
+            <h3>Some Links</h3>
+
+            <ul>
+            <li>
+                <a href="#faq">F.A.Q</a>
+            </li>
+            <li>
+                <a href="#cookies-policy">Cookies Policy</a>
+            </li>
+            <li>
+                <a href="#terms-of-services">Terms Of Service</a>
+            </li>
+            <li>
+                <a href="#support">Support</a>
+            </li>
+            </ul>
+        </div>
+
+        <div id="contactUs" class="column">
+            <h3>Contact Us</h3>
+            <div>
+            <input type="email" placeholder="Your email id here" />
+            <textarea
+                name=""
+                id=""
+                cols="50"
+                rows="5"
+                placeholder="Message"
+            ></textarea>
+            <button>Submit</button>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright &copy; 2022 Tech Tribes</p>
+        </div>
+        </div>
+    </footer>
+
+    <script src="./Scripts/finalHeader&Footer.js"></script>
+    <script src="./Scripts/hamburger.js"></script>
+    <script src="./Scripts/timetable.js"></script>
+    </body>
+</html>
+    
