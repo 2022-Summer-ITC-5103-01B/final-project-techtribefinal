@@ -1,0 +1,224 @@
+*{
+    margin:0;
+    padding:0;
+}  
+body{
+    background-color: lightblue;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size:18px;
+}
+#wrapper{
+    margin:30px 22px;
+    border: 1px solid;
+    box-shadow: 5px 10px 4px #888888;
+}
+
+/* Header starts */
+header{
+    background-color: white;
+}
+header img{
+    width:300px;
+}
+header>nav{
+    margin: 0 20px 0 0;
+}
+header ul{
+    margin: 0;
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header li{
+    list-style: none;
+    margin:4px 0;
+}
+header a{
+    text-decoration: none;
+    font-size:large;
+    color:grey;
+}
+
+
+/* Header for Tablets */
+@media only screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/* Header for mobile */
+@media only screen 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #wrapper{
+        margin: 0;
+    }
+    header{
+        padding: 0 0 10px 0;
+    }
+    header ul{
+        flex-direction: column;
+    }
+    header img{
+        width:250px;
+        margin: 0 0 0 -20px;
+    }
+}
+
+/* Header ends */
+
+/* Main begins */
+main{
+    background-color: aliceblue;
+    padding:40px;
+}
+
+
+/* Main for mobile */
+@media only screen 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    main{
+        padding:10px;
+    }
+}
+
+
+/*******/
+
+img,p{
+    margin:2%;
+}
+ul{
+    margin-left:6%;
+}
+h1{
+    margin-top:0;
+    color:teal;
+}
+h1, h2{
+    text-align: center;
+    margin:2%;
+}
+#firstImage{
+    margin:0 0 0 20%;
+    width: 60%;
+}
+
+.flexed{
+    display:flex;
+}
+.flexed>img{
+    height:80%;
+    width:180%;
+}
+.flexed>div{
+    margin:2%;
+}
+
+table{
+    border:5px solid teal;
+    border-collapse:collapse;
+    margin:0 auto;
+}
+/* Set different color for the table head */
+thead{
+    background-color: teal;
+    color:white;
+    text-align: center;
+}
+/* Setting zebra color for table rows */
+tbody>tr:nth-child(odd){
+    background-color: lightgrey;
+}
+/* Just some padding for aesthetics */
+th,td{
+    padding: 5px;
+}
+hr{
+    margin:2%;
+}
+@media only screen 
+  /* and (min-device-width: 600px)  */
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #firstImage{
+        width:80%;
+        margin:0 0 0 10%;
+    }
+    .flexed{
+        flex-direction: column;
+    }
+    .flexed>img{
+        width:100%;
+    }
+}
+
+
+
+/* Main ends */
+
+/* Footer begins */
+footer{
+    background-color: white;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 2%; */
+}
+footer>img{
+    width:250px;
+}
+footer>div, footer>address{
+    margin:2%;
+}
+footer div span, address span{
+    font-weight: 600;
+}
+#smallFlex{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#smallFlex i{
+    font-size: 2.5em;
+}
+.bi-whatsapp{
+    color:green;
+}
+.bi-facebook{
+    color:blue;
+}
+.bi-twitter{
+    color:aqua;
+}
+
+/* Footer for Tablets */
+@media only screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    footer>img{
+        display: none;
+    }
+}
+
+/* Footer for mobile */
+@media only screen 
+  and (max-device-width: 600px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    footer{
+        flex-direction: column;    
+    }
+    footer>img{
+        display:none;
+    }
+    footer>div, footer>address{
+        
+    }
+}
+
+/* Footer ends */

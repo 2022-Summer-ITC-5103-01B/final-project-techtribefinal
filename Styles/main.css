@@ -1,0 +1,315 @@
+* {
+    margin: 0%;
+  }
+  
+  body{
+    background-color: lightblue;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  #wrapper{
+    margin:30px;
+    border: 1px solid;
+    box-shadow: 5px 10px 4px #888888;
+  }
+  
+  /* Header starts */
+  header{
+    background-color: white;
+  }
+  header>img{
+    width:250px;
+    
+  }
+  header>nav{
+    display:inline;
+    float:right;
+    padding:30px;
+  }
+  header a{
+    text-decoration: none;
+    padding:20px;
+    margin:5px;
+    font-size:large;
+    color:grey;
+  }
+  
+/*BhringrajSava*/
+.bhring{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: aliceblue;
+  float:left;
+  margin-top: 20px;
+}
+.bhring :hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.bhring button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+ #price {
+    
+        color: grey;
+        font-size: 22px;
+}
+      
+  img{
+    width: 70%;
+  }
+  .tick{
+    color: goldenrod;
+  }
+  #fonts{
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /* Bala Rishtam */
+  .bala{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    float: right;
+    margin-top: 20px;
+
+  }
+  .bala :hover{
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .bala button {
+      border: none;
+      outline: 0;
+      padding: 12px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+    }
+    /*Alpum Cepa */
+    .cepa{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        background-color: aliceblue;
+        float:left;
+        margin-top: 20px;
+        margin-left:  20rem;
+      }
+      .cepa :hover{
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      .cepa button {
+          border: none;
+          outline: 0;
+          padding: 12px;
+          color: white;
+          background-color: #000;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;
+        }
+      
+       #price {
+          
+              color: grey;
+              font-size: 22px;
+      }
+            
+        img{
+          width: 70%;
+        }
+        .tick{
+          color: goldenrod;
+        }
+        #fonts{
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+        /*Abhay Rishta */
+        .abhay{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color: aliceblue;
+            float:left;
+            margin-top: 30px;
+            margin-left:  0rem;
+          }
+          .abhay :hover{
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          }
+          .abhay button {
+              border: none;
+              outline: 0;
+              padding: 12px;
+              color: white;
+              background-color: #000;
+              text-align: center;
+              cursor: pointer;
+              width: 100%;
+              font-size: 18px;
+            }
+          
+           #price {
+              
+                  color: grey;
+                  font-size: 22px;
+           }
+                
+            img{
+              width: 70%;
+            }
+            .tick{
+              color: goldenrod;
+            }
+            #fonts{
+              font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+              font-weight: bold;
+              text-decoration: underline;
+            }
+            /*Hypericum */
+            .hyper{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+                margin: auto;
+                text-align: center;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                background-color: aliceblue;
+                float:left;
+                margin-top: 30px;
+                margin-left: 20rem;
+              }
+              .hyper:hover{
+                  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+              }
+              .hyper button {
+                  border: none;
+                  outline: 0;
+                  padding: 12px;
+                  color: white;
+                  background-color: #000;
+                  text-align: center;
+                  cursor: pointer;
+                  width: 100%;
+                  font-size: 18px;
+                }
+              
+               #price {
+                  
+                      color: grey;
+                      font-size: 22px;
+               }
+                    
+                img{
+                  width: 70%;
+                }
+                .tick{
+                  color: goldenrod;
+                }
+                #fonts{
+                  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  font-weight: bold;
+                  text-decoration: underline;
+                }
+                /*Angoor Sava*/
+            .ang{
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                max-width: 300px;
+                margin: auto;
+                text-align: center;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                background-color: aliceblue;
+                float:right;
+                margin-top: 30px;
+              }
+              .ang:hover{
+                  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+              }
+              .ang button {
+                  border: none;
+                  outline: 0;
+                  padding: 12px;
+                  color: white;
+                  background-color: #000;
+                  text-align: center;
+                  cursor: pointer;
+                  width: 100%;
+                  font-size: 18px;
+                }
+              
+               #price {
+                  
+                      color: grey;
+                      font-size: 22px;
+               }
+                    
+                img{
+                  width: 65%;
+                  height: 50%;
+                }
+                .tick{
+                  color: goldenrod;
+                }
+                #fonts{
+                  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  font-weight: bold;
+                  text-decoration: underline;
+                }
+            /*Media Query*/
+            @media only screen and (max-width: 992px) {
+                .body {background-color: azure;}
+
+                
+            }
+
+            
+
+             /*Footer */
+            footer{
+            background-color: white;
+            }
+
+            footer>div{
+            display:inline-block;
+            width:400px;
+            }
+
+            footer img{
+            width:200px;
+            margin-left:60px;   
+            }
+
+            footer p{
+            margin:0 0 20px 20px;
+            }
+
+            footer>address{
+            text-align: right;
+            float:right;
+            padding:20px;
+             }
+

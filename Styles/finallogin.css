@@ -1,0 +1,207 @@
+/* For the H2 element */
+h2{
+    background-color:oldlace;
+    padding: 30px 35px;
+    margin: -10px -50px;
+    text-align:center;
+    border-radius: 10px 10px 0 0;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    text-decoration: underline;
+    }
+    hr{
+    margin: 10px -50px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 40px;
+    }
+    /* Container tag */
+    div.container{
+    width: 10px;
+    height: 10px;
+    margin:35px auto;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 500px;
+    margin-left: 650px;
+
+    }
+    div.main{
+    width: 300px;
+    padding: 10px 50px 25px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-family: raleway;
+    float:left;
+    margin-top:50px;
+    }
+    /* For the Form fields */
+    input[type=text],input[type=password]{
+    width: 100%;
+    height: 45px;
+    padding: 1px;
+    margin-bottom: 25px;
+    margin-top: 3px;
+    border: 2px solid #ccc;
+    color: #4f4f4f;
+    font-size: 16px;
+    border-radius: 5px;
+    }
+    label{
+    color: #464646;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 14px;
+    font-weight: bold;
+    }
+    center{
+    font-size:32px;
+    }
+    /* For the Register now message */
+    .note{
+    color:red;
+    }
+    .back{
+    text-decoration: none;
+    border: 1px solid rgb(0, 143, 255);
+    background-color: rgb(0, 214, 255);
+    padding: 3px 20px;
+    border-radius: 2px;
+    color: black;
+    }
+    /* For Submit button */
+    input[type=button]{
+    font-size: 16px;
+    background: linear-gradient(orange 3%, #ffdd7f 100%);
+    border: 1px solid #e5a900;
+    color: #4E4D4B;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 0;
+    outline:none;
+    }
+    input[type=button]:hover{
+    background: linear-gradient(#ffdd7f 5%, orange 100%);
+    }
+    /* Media Queries for the log in page. */
+    @media screen and (max-width: 600px) {
+        div.container{
+           justify-content: center;
+        }
+    }
+  
+    /* Footer begins */
+    footer {
+        margin-top: 20px;
+        background-color: #121315;
+        color: #a7a7a7;
+        font-size: 16px;
+      }
+      footer * {
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+        border: none;
+        outline: none;
+      }
+      .row {
+        padding: 1em 1em;
+      }
+      .row.primary {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 2fr;
+        align-items: stretch;
+      }
+      .column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 2em;
+      }
+      footer h3 {
+        width: 100%;
+        text-align: left;
+        color: white;
+        font-size: 1.4em;
+        white-space: nowrap;
+      }
+      footer ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+      footer li:not(:first-child) {
+        margin-top: 0.8em;
+      }
+      footer ul li a {
+        color: #a7a7a7;
+        text-decoration: none;
+      }
+      footer ul li a:hover {
+        color: #2a8ded;
+      }
+      .about p {
+        text-align: justify;
+        margin: 0;
+      }
+      #contactUs textarea {
+        width: 100%;
+      }
+      footer input,
+      footer textarea,
+      footer button {
+        font-size: 1em;
+        padding: 1em;
+        width: 100%;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      footer button {
+        background-color: #c7940a;
+        color: #ffffff;
+      }
+      div.social {
+        display: flex;
+        font-size: 1.4em;
+        flex-direction: row;
+        margin-top: 0.5em;
+      }
+      .social i {
+        color: #bac6d9;
+        padding: 10px;
+      }
+      
+      .copyright p {
+        font-size: 0.9em;
+      }
+      
+      /* Footer for tablets */
+      @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+        .about {
+          grid-area: about;
+        }
+        .links {
+          grid-area: links;
+        }
+        #contactUs {
+          grid-area: contact;
+        }
+        .row.primary {
+          grid-template-areas:
+            "about about about links"
+            "contact contact contact contact";
+        }
+        .row.primary {
+          row-gap: 2em;
+        }
+      }
+      
+      /* Footer for mobile */
+      @media only screen and (max-device-width: 600px) {
+        .row.primary {
+          grid-template-columns: 1fr;
+          row-gap: 2em;
+        }
+      }
+      /* Footer ends */

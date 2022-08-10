@@ -1,0 +1,310 @@
+/* body */
+body{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+
+/* Header starts */
+header {
+  background-color: aliceblue;
+}
+header img {
+  width: 300px;
+}
+header > nav {
+  margin: 0 20px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header ul#mainNavigation {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Created a flex container and used the row direction with space-between */
+header li {
+  list-style: none;
+  padding: 20px;
+}
+.hamburger {
+  align-items: center;
+  margin-top: 50px;
+  display: none;
+}
+header a,
+header div.dropdown {
+  text-decoration: none;
+  font-size: large;
+  color: grey;
+}
+
+/* Dropdowns created for navigation */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content li:hover {
+  background-color: lightgrey;
+  color: darkslategray;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content > li {
+  padding: 0.8em 0.5em;
+}
+
+/* Header for Tablets */
+/* @media only screen 
+  and (min-device-width: 600px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+} */
+
+/* Header for mobile */
+@media only screen and (max-width: 850px) and (-webkit-min-device-pixel-ratio: 2) {
+  header {
+    padding: 0 0 10px 0;
+  }
+  header ul#mainNavigation {
+    display: none;
+    width: 100%;
+  }
+  #mainNavigation.show {
+    display: flex;
+    flex-direction: column;
+  }
+  .hamburger {
+    margin-top: 40px;
+    display: block;
+  }
+  header img {
+    width: 250px;
+    margin: 0 0 0 -20px;
+  }
+}
+
+/* Header ends */
+
+.heading {
+    color: whitesmoke;
+    text-align: center;
+    background-image: url(../Image/pbackground.jpeg);
+    background-position: right bottom, left top;
+    /* background-repeat: no-repeat, repeat; */
+    height: 450px;
+}
+
+.heading h1 {
+    padding-top: 190px;
+    font-size: 3.5rem;
+}
+
+/* Content */
+.container{
+    margin: 30px;
+}
+hr{
+  color: darkgray; 
+}
+.image1{
+    float: right;
+    width: 50%;
+    height: 70%;
+    padding-left: 50px;
+}
+.col-1{
+    margin: 50px;
+    padding: 20px;
+}
+.col-2{
+    padding-right: 20px;
+    margin-bottom: 100px;
+}
+
+.image2{
+    float: left;
+    width: 50%;
+    height: 70%;
+    padding-right: 50px;
+}
+.col-3{
+    
+    margin: 50px;
+    padding: 20px;
+}
+.col-4{
+    padding-left: 20px;
+    margin-bottom: 100px;
+    
+}
+
+/* css for faqs */
+#faqs{
+ margin: 3  0px; 
+padding: 50px;
+}
+#faqs h1 { 
+  font-size: 150%;
+}
+#faqs h2 {
+  font-size: 120%;
+  padding: .25em 0 .25em 25px;
+  cursor: pointer;
+  background: url(../Image/plus.png) no-repeat left center;
+}
+#faqs h2.minus {
+  background: url(../Image/minus.png) no-repeat left center;
+}
+#faqs a {
+  color: black;
+  text-decoration: none; 
+}
+#faqs a:focus, a:hover { 
+color: blue; 
+}
+#faqs div {
+  display: none;
+}
+#faqs div.open {
+  display: block;
+}
+#faqs ul {
+  padding-left: 45px;
+}
+#faqs li {
+  padding-bottom: .25em;
+}
+#faqs p {
+  padding-bottom: .25em;
+  padding-left: 25px;
+}
+
+/* footer */
+footer {
+  margin-top: 20px;
+  background-color: #121315;
+  color: #a7a7a7;
+  font-size: 16px;
+}
+footer * {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 2fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+}
+footer h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+footer li:not(:first-child) {
+  margin-top: 0.8em;
+}
+footer ul li a {
+  color: #a7a7a7;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #2a8ded;
+}
+.about p {
+  text-align: justify;
+  margin: 0;
+}
+#contactUs textarea {
+  width: 100%;
+}
+footer input,
+footer textarea,
+footer button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+footer button {
+  background-color: #c7940a;
+  color: #ffffff;
+}
+div.social {
+  display: flex;
+  font-size: 1.4em;
+  flex-direction: row;
+  margin-top: 0.5em;
+}
+.social i {
+  color: #bac6d9;
+  padding: 10px;
+}
+
+.copyright p {
+  font-size: 0.9em;
+}
+/* Footer for tablets */
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .about {
+    grid-area: about;
+  }
+  .links {
+    grid-area: links;
+  }
+  #contactUs {
+    grid-area: contact;
+  }
+  .row.primary {
+    grid-template-areas:
+      "about about about links"
+      "contact contact contact contact";
+  }
+  .row.primary {
+    row-gap: 2em;
+  }
+}
+
+/* Footer for mobile */
+@media only screen and (max-device-width: 600px) {
+  .row.primary {
+    grid-template-columns: 1fr;
+    row-gap: 2em;
+  }
+  .column{
+      padding: 0;
+  }
+}
+/* Footer ends */
