@@ -1,99 +1,112 @@
-*{
-    margin:0;
-    padding:0;
-}  
-body{
-    background-color: lightblue;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-size:18px;
-}
-#wrapper{
-    margin:30px 22px;
-    border: 1px solid;
-    box-shadow: 5px 10px 4px #888888;
-}
-
-/* Header starts */
-header{
-    background-color: white;
-}
-header img{
-    width:300px;
-}
-header>nav{
-    margin: 0 20px 0 0;
-}
-header ul{
+* {
     margin: 0;
-    display:flex;
+    padding: 0;
+  }
+  /* Given to override any browser set margin and padding for a consistent view across all browsers */
+  body {
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  /* Consistent font-family given to all pages */
+  
+  /* Header starts */
+  header {
+    background-color: aliceblue;
+  }
+  header img {
+    width: 300px;
+  }
+  header > nav {
+    margin: 0 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  header ul#mainNavigation {
+    margin: 0;
+    display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-}
-header li{
+  }
+  /* Created a flex container and used the row direction with space-between */
+  header li {
     list-style: none;
-    margin:4px 0;
-}
-header a{
+    padding: 20px;
+  }
+  .hamburger {
+    align-items: center;
+    margin-top: 50px;
+    display: none;
+  }
+  header a,
+  header div.dropdown {
     text-decoration: none;
-    font-size:large;
-    color:grey;
-}
-
-
-/* Header for Tablets */
-@media only screen 
-  and (min-device-width: 600px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-}
-
-/* Header for mobile */
-@media only screen 
-  and (max-device-width: 600px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    #wrapper{
-        margin: 0;
+    font-size: large;
+    color: grey;
+  }
+  
+  /* Dropdowns created for navigation */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown:hover .dropdown-content li:hover {
+    background-color: lightgrey;
+    color: darkslategray;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown-content > li {
+    padding: 0.8em 0.5em;
+  }
+  
+  /* Header for Tablets */
+  /* @media only screen 
+    and (min-device-width: 600px) 
+    and (max-device-width: 1024px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+  } */
+  
+  /* Header for mobile */
+  @media only screen and (max-width: 850px) and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+      padding: 0 0 10px 0;
     }
-    header{
-        padding: 0 0 10px 0;
+    header ul#mainNavigation {
+      display: none;
+      width: 100%;
     }
-    header ul{
-        flex-direction: column;
+    #mainNavigation.show {
+      display: flex;
+      flex-direction: column;
     }
-    header img{
-        width:250px;
-        margin: 0 0 0 -20px;
+    .hamburger {
+      margin-top: 40px;
+      display: block;
     }
-}
-
-/* Header ends */
-
-/* Main begins */
-main{
-    background-color: aliceblue;
-    padding:40px;
-}
-
-
-/* Main for mobile */
-@media only screen 
-  and (max-device-width: 600px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    main{
-        padding:10px;
+    header img {
+      width: 250px;
+      margin: 0 0 0 -20px;
     }
-}
+  }
+  
+  /* Header ends */
 
 
 /*******/
+main{
+    padding: 2em 3em;
+}
 
-img,p{
-    margin:2%;
-}
-ul{
-    margin-left:6%;
-}
 h1{
     margin-top:0;
     color:teal;
@@ -102,9 +115,16 @@ h1, h2{
     text-align: center;
     margin:2%;
 }
+
+img,p{
+    margin:2%;
+}
 #firstImage{
     margin:0 0 0 20%;
     width: 60%;
+}
+ul{
+    margin-left:6%;
 }
 
 .flexed{
@@ -116,6 +136,16 @@ h1, h2{
 }
 .flexed>div{
     margin:2%;
+}
+
+.dropdownHerbs{
+    width: 100%;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4em;
+    font-weight:100;
 }
 
 table{
@@ -140,13 +170,18 @@ th,td{
 hr{
     margin:2%;
 }
+
+/* For tablets */
 @media only screen 
-  /* and (min-device-width: 600px)  */
+  and (min-device-width: 600px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
     #firstImage{
         width:80%;
         margin:0 0 0 10%;
+    }
+    .dropdownHerbs{
+        font-size: 1em;
     }
     .flexed{
         flex-direction: column;
@@ -156,69 +191,149 @@ hr{
     }
 }
 
+/* For mobile phones */
+@media only screen
+    and (max-device-width: 600px){
+        main{
+            padding: 1em;
+        }
+        #firstImage{
+            width: 100%;
+            margin: 0;
+        }
+        .dropdownHerbs{
+            font-size: 1em;
+            margin: 0.5em 0;
+        }
+        .flexed{
+            flex-direction: column;
+        }
+        .flexed>img{
+            width: 100%;
+        }
+    }
+
 
 
 /* Main ends */
 
 /* Footer begins */
-footer{
-    background-color: white;
-    display:flex;
+
+/* footer */
+footer {
+    margin-top: 20px;
+    background-color: #121315;
+    color: #a7a7a7;
+    font-size: 16px;
+  }
+  footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  .row {
+    padding: 1em 1em;
+  }
+  .row.primary {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 2fr;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+  }
+  footer h3 {
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-size: 1.4em;
+    white-space: nowrap;
+  }
+  footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  footer li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  footer ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+  }
+  footer ul li a:hover {
+    color: #2a8ded;
+  }
+  .about p {
+    text-align: justify;
+    margin: 0;
+  }
+  #contactUs textarea {
+    width: 100%;
+  }
+  footer input,
+  footer textarea,
+  footer button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  footer button {
+    background-color: #c7940a;
+    color: #ffffff;
+  }
+  div.social {
+    display: flex;
+    font-size: 1.4em;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    /* padding: 2%; */
-}
-footer>img{
-    width:250px;
-}
-footer>div, footer>address{
-    margin:2%;
-}
-footer div span, address span{
-    font-weight: 600;
-}
-#smallFlex{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-#smallFlex i{
-    font-size: 2.5em;
-}
-.bi-whatsapp{
-    color:green;
-}
-.bi-facebook{
-    color:blue;
-}
-.bi-twitter{
-    color:aqua;
-}
-
-/* Footer for Tablets */
-@media only screen 
-  and (min-device-width: 600px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    footer>img{
-        display: none;
+    margin-top: 0.5em;
+  }
+  .social i {
+    color: #bac6d9;
+    padding: 10px;
+  }
+  
+  .copyright p {
+    font-size: 0.9em;
+  }
+  /* Footer for tablets */
+  @media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    .about {
+      grid-area: about;
     }
-}
-
-/* Footer for mobile */
-@media only screen 
-  and (max-device-width: 600px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-    footer{
-        flex-direction: column;    
+    .links {
+      grid-area: links;
     }
-    footer>img{
-        display:none;
+    #contactUs {
+      grid-area: contact;
     }
-    footer>div, footer>address{
-        
+    .row.primary {
+      grid-template-areas:
+        "about about about links"
+        "contact contact contact contact";
     }
-}
-
-/* Footer ends */
+    .row.primary {
+      row-gap: 2em;
+    }
+  }
+  
+  /* Footer for mobile */
+  @media only screen and (max-device-width: 600px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+      row-gap: 2em;
+    }
+    .column{
+        padding: 0;
+    }
+  }
+  /* Footer ends */
+  
